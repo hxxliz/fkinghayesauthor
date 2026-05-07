@@ -315,7 +315,7 @@ footer {
 .book-card { position: relative; cursor: pointer; }
 .book-cover {
   position: relative; aspect-ratio: 2/3; overflow: hidden; margin-bottom: 1.5rem;
-  transition: transform 0.4s ease;
+  transition: transform 0.4s ease; background: var(--smoke);
 }
 .book-card:hover .book-cover { transform: translateY(-8px); }
 .book-cover-inner {
@@ -703,9 +703,8 @@ footer {
       </div>
       <div class="books-grid">
         <div class="book-card reveal">
-          <div class="book-cover cover-sf">
-            <div class="book-spine-line"></div>
-            <div class="book-cover-inner"><div class="book-cover-text"><div class="book-cover-title">Slaughtered<br>Firefly</div><div class="book-cover-series">Shadowed States · Book 1</div></div></div>
+          <div class="book-cover">
+            <img src="https://res.cloudinary.com/wellfleet/image/upload/c_fill,f_auto,q_auto,w_638/7i24f0v2oxns1ad76sinqf2zej31" alt="Slaughtered Firefly cover" style="width:100%;height:100%;object-fit:cover;display:block;">
             <div class="book-cover-overlay"><a href="https://www.amazon.com/dp/B0FBHKF71D" target="_blank" rel="noopener" class="book-buy-btn">Read on Kindle →</a></div>
           </div>
           <div class="book-series-badge">Shadowed States · #1</div>
@@ -718,9 +717,8 @@ footer {
           </div>
         </div>
         <div class="book-card reveal">
-          <div class="book-cover cover-fh">
-            <div class="book-spine-line" style="background:linear-gradient(to bottom,#1040b0,#0a2060,transparent)"></div>
-            <div class="book-cover-inner"><div class="book-cover-text"><div class="book-cover-title">Fixing<br>Her</div><div class="book-cover-series">The Doll People · Book 1</div></div></div>
+          <div class="book-cover">
+            <img src="https://res.cloudinary.com/wellfleet/image/upload/c_fill,f_auto,q_auto,w_638/ihnr5plbt2oa00ipwz9lv6mq9qgm" alt="Fixing Her cover" style="width:100%;height:100%;object-fit:cover;display:block;">
             <div class="book-cover-overlay" style="background:linear-gradient(to top,rgba(10,30,90,0.8),transparent)"><a href="https://www.amazon.com/dp/B0G7MQ4GVT" target="_blank" rel="noopener" class="book-buy-btn" style="background:rgba(10,30,90,0.9);border-color:#1040b0">Buy Now →</a></div>
           </div>
           <div class="book-series-badge" style="color:#4060d0;border-color:rgba(40,80,200,0.3)">The Doll People · #1</div>
@@ -732,9 +730,8 @@ footer {
           </div>
         </div>
         <div class="book-card reveal">
-          <div class="book-cover cover-sb">
-            <div class="book-spine-line" style="background:linear-gradient(to bottom,#6030a0,#3a1570,transparent)"></div>
-            <div class="book-cover-inner"><div class="book-cover-text"><div class="book-cover-title">Starving<br>Butterfly</div><div class="book-cover-series">Shadowed States · Book 2</div></div></div>
+          <div class="book-cover">
+            <img src="https://res.cloudinary.com/wellfleet/image/upload/c_fill,f_auto,q_auto,w_638/ycoec94rvkedodimn9bmijn6912z" alt="Starving Butterfly cover" style="width:100%;height:100%;object-fit:cover;display:block;">
             <div class="book-cover-overlay" style="background:linear-gradient(to top,rgba(60,20,100,0.8),transparent)"><a href="https://www.amazon.com/dp/B0FZ697N6T" target="_blank" rel="noopener" class="book-buy-btn" style="background:rgba(60,20,100,0.9);border-color:#6030a0">Read on Kindle →</a></div>
           </div>
           <div class="book-series-badge">Shadowed States · #2</div>
@@ -909,9 +906,8 @@ footer {
 
       <!-- Slaughtered Firefly -->
       <div class="book-detail">
-        <div class="book-detail-cover book-cover cover-sf" style="aspect-ratio:2/3;max-width:300px">
-          <div class="book-spine-line"></div>
-          <div class="book-cover-inner"><div class="book-cover-text"><div class="book-cover-title" style="font-size:2rem">Slaughtered<br>Firefly</div><div class="book-cover-series">Shadowed States · Book 1</div></div></div>
+        <div class="book-detail-cover" style="aspect-ratio:2/3;max-width:300px;padding:0;overflow:hidden">
+          <img src="https://res.cloudinary.com/wellfleet/image/upload/c_fill,f_auto,q_auto,w_638/7i24f0v2oxns1ad76sinqf2zej31" alt="Slaughtered Firefly cover" style="width:100%;height:100%;object-fit:cover;display:block;">
         </div>
         <div class="book-detail-meta">
           <span class="book-detail-series">Shadowed States Series · Book #1</span>
@@ -932,9 +928,8 @@ footer {
 
       <!-- Fixing Her -->
       <div class="book-detail">
-        <div class="book-detail-cover book-cover cover-fh" style="aspect-ratio:2/3;max-width:300px">
-          <div class="book-spine-line" style="background:linear-gradient(to bottom,#1040b0,#0a2060,transparent)"></div>
-          <div class="book-cover-inner"><div class="book-cover-text"><div class="book-cover-title" style="font-size:2rem">Fixing<br>Her</div><div class="book-cover-series">The Doll People · Book 1</div></div></div>
+        <div class="book-detail-cover" style="aspect-ratio:2/3;max-width:300px;padding:0;overflow:hidden">
+          <img src="https://res.cloudinary.com/wellfleet/image/upload/c_fill,f_auto,q_auto,w_638/ihnr5plbt2oa00ipwz9lv6mq9qgm" alt="Fixing Her cover" style="width:100%;height:100%;object-fit:cover;display:block;">
         </div>
         <div class="book-detail-meta">
           <span class="book-detail-series" style="color:#4060d0">The Doll People Series · Book #1</span>
@@ -954,9 +949,8 @@ footer {
 
       <!-- Starving Butterfly -->
       <div class="book-detail">
-        <div class="book-detail-cover book-cover cover-sb" style="aspect-ratio:2/3;max-width:300px">
-          <div class="book-spine-line" style="background:linear-gradient(to bottom,#6030a0,#3a1570,transparent)"></div>
-          <div class="book-cover-inner"><div class="book-cover-text"><div class="book-cover-title" style="font-size:2rem">Starving<br>Butterfly</div><div class="book-cover-series">Shadowed States · Book 2</div></div></div>
+        <div class="book-detail-cover" style="aspect-ratio:2/3;max-width:300px;padding:0;overflow:hidden">
+          <img src="https://res.cloudinary.com/wellfleet/image/upload/c_fill,f_auto,q_auto,w_638/ycoec94rvkedodimn9bmijn6912z" alt="Starving Butterfly cover" style="width:100%;height:100%;object-fit:cover;display:block;">
         </div>
         <div class="book-detail-meta">
           <span class="book-detail-series">Shadowed States Series · Book #2</span>
