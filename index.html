@@ -45,8 +45,8 @@ body::before {
 }
 
 /* ── PAGE SHELL ── */
-#page { display: none; }
-#page.active { display: block; }
+.page { display: none; }
+.page.active { display: block; }
 
 /* ── NAV ── */
 .mobile-menu {
@@ -592,7 +592,7 @@ footer {
   .social-grid { gap:1rem; }
   .social-link { min-width:100px; padding:1.5rem 1rem; }
   .newsletter-form { flex-direction:column; }
-  .newsletter-form input { border-right:1px solid rgba(212,197,176,0.15); border-bottom:none; }
+  .newsletter-form input { border-right:1px solid rgba(212,197,176,0.15); border-bottom:1px solid rgba(212,197,176,0.15); }
   .about-stats { gap:1rem; }
   .page-hero { padding:10rem 1.5rem 4rem; }
 }
@@ -603,13 +603,13 @@ footer {
 <!-- ══ MOBILE MENU ══ -->
 <div class="mobile-menu" id="mobileMenu">
   <button class="mobile-menu-close" id="menuClose">✕ close</button>
-  <a href="#" onclick="navigate('home');closeMobileMenu()">Home</a>
-  <a href="#" onclick="navigate('about');closeMobileMenu()">About</a>
-  <a href="#" onclick="navigate('books');closeMobileMenu()">Books</a>
-  <a href="#" onclick="navigate('signed');closeMobileMenu()">Signed Copies</a>
-  <a href="#" onclick="navigate('triggers');closeMobileMenu()">Trigger Warnings</a>
-  <a href="#" onclick="navigate('updates');closeMobileMenu()">Updates</a>
-  <a href="#" onclick="navigate('connect');closeMobileMenu()" style="color:var(--crimson)">Connect ✦</a>
+  <a href="#" onclick="navigate('home');closeMobileMenu();return false">Home</a>
+  <a href="#" onclick="navigate('about');closeMobileMenu();return false">About</a>
+  <a href="#" onclick="navigate('books');closeMobileMenu();return false">Books</a>
+  <a href="#" onclick="navigate('signed');closeMobileMenu();return false">Signed Copies</a>
+  <a href="#" onclick="navigate('triggers');closeMobileMenu();return false">Trigger Warnings</a>
+  <a href="#" onclick="navigate('updates');closeMobileMenu();return false">Updates</a>
+  <a href="#" onclick="navigate('connect');closeMobileMenu();return false" style="color:var(--crimson)">Connect ✦</a>
 </div>
 
 <!-- ══ NAV ══ -->
@@ -742,7 +742,7 @@ footer {
           <p class="book-excerpt">They took her daughter, thinking she would shatter. They were mistaken. She is done letting men decide what happens to her body, her child, or her future.</p>
           <div class="book-btns">
             <a href="https://www.amazon.com/dp/B0FZ697N6T" target="_blank" rel="noopener" class="btn-primary" style="font-size:0.6rem;padding:0.6rem 1.2rem">Kindle</a>
-            <a href="https://www.amazon.com/dp/B0G7MQ4GVT" target="_blank" rel="noopener" class="btn-ghost" style="font-size:0.6rem;padding:0.6rem 1.2rem">Paperback</a>
+            <button class="btn-ghost" onclick="navigate('books')" style="font-size:0.6rem;padding:0.6rem 1.2rem">Learn More</button>
           </div>
         </div>
       </div>
@@ -1157,12 +1157,14 @@ function navigate(page) {
   const el = document.getElementById('page-' + page);
   if (el) el.classList.add('active');
   currentPage = page;
-  window.scrollTo({ top: 0, behavior: 'smooth' });
+  // reset hero parallax when leaving home
+  const hi = document.querySelector('.hero-inner');
+  if (hi && page !== 'home') { hi.style.transform = ''; hi.style.opacity = ''; }
+  window.scrollTo(0, 0);
   document.querySelectorAll('.nav-links a').forEach(a => {
     a.classList.toggle('active', a.dataset.page === page);
   });
-  // re-observe reveals on new page
-  setTimeout(attachReveals, 100);
+  setTimeout(attachReveals, 50);
 }
 
 // ── MOBILE MENU ──
@@ -1202,6 +1204,7 @@ const revealObserver = new IntersectionObserver((entries) => {
     if (entry.isIntersecting) {
       entry.target.style.opacity = '1';
       entry.target.style.transform = 'translateY(0)';
+      entry.target.dataset.revealed = '1';
       revealObserver.unobserve(entry.target);
     }
   });
@@ -1209,7 +1212,7 @@ const revealObserver = new IntersectionObserver((entries) => {
 
 function attachReveals() {
   document.querySelectorAll('#page-' + currentPage + ' .reveal').forEach((el, i) => {
-    if (el.style.opacity === '1') return;
+    if (el.dataset.revealed) return; // already animated, skip
     el.style.opacity = '0';
     el.style.transform = 'translateY(24px)';
     el.style.transition = `opacity 0.7s ${i * 0.08}s ease, transform 0.7s ${i * 0.08}s ease`;
@@ -1217,9 +1220,11 @@ function attachReveals() {
   });
 }
 
-// init
+// init — just wire nav state and reveals, don't re-navigate (page-home already has .active in HTML)
+document.querySelectorAll('.nav-links a').forEach(a => {
+  a.classList.toggle('active', a.dataset.page === 'home');
+});
 attachReveals();
-navigate('home');
 </script>
 
 </body>
