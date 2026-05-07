@@ -447,18 +447,19 @@ footer {
 }
 .newsletter-inner { max-width:600px; margin:0 auto; text-align:center; position:relative; }
 .newsletter-inner p { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:1.1rem; color:var(--parchment); opacity:0.7; margin-bottom:2.5rem; }
-.newsletter-form { display:flex; max-width:450px; margin:0 auto; }
+.newsletter-form { display:flex; max-width:550px; margin:0 auto; }
 .newsletter-form input {
   flex:1; background:rgba(15,13,12,0.8); border:1px solid rgba(212,197,176,0.15);
-  border-right:none; color:var(--bone); padding:1rem 1.5rem;
+  border-right:none; color:var(--bone); padding:1rem 1.25rem;
   font-family:'Raleway',sans-serif; font-size:0.85rem; outline:none; transition:border-color 0.3s;
+  min-width:0;
 }
 .newsletter-form input::placeholder { color:rgba(212,197,176,0.3); }
 .newsletter-form input:focus { border-color:rgba(196,30,58,0.5); }
 .newsletter-form button {
   font-family:'Cinzel',serif; font-size:0.65rem; letter-spacing:0.2em; text-transform:uppercase;
   color:var(--ivory); background:var(--blood); border:1px solid var(--crimson);
-  padding:1rem 1.5rem; cursor:pointer; transition:background 0.3s; white-space:nowrap;
+  padding:1rem 1.5rem; cursor:pointer; transition:background 0.3s; white-space:nowrap; flex-shrink:0;
 }
 .newsletter-form button:hover { background:var(--crimson); }
 
@@ -836,8 +837,8 @@ footer {
       <span class="section-label">The List</span>
       <h2 class="section-title">Into the <em>Dark</em></h2>
       <p>Get exclusive updates on new releases, cover reveals, and signed copy drops — before anyone else hears a whisper.</p>
-      <form class="newsletter-form" action="https://authorfkinghayes.com/mailing-list" method="GET" target="_blank">
-        <input type="email" placeholder="your@email.com" name="email" required>
+      <form class="newsletter-form" action="https://app.kit.com/forms/9413033/subscriptions" method="POST" target="_blank">
+        <input type="text" name="fields[first_name]" placeholder="first name" required><input type="email" name="email_address" placeholder="your@email.com" required>
         <button type="submit">Subscribe</button>
       </form>
     </div>
@@ -885,8 +886,8 @@ footer {
       <span class="section-label">Stay Connected</span>
       <h2 class="section-title">Join the <em>List</em></h2>
       <p>Sign up to receive updates about new releases and works in progress.</p>
-      <form class="newsletter-form" action="https://authorfkinghayes.com/mailing-list" method="GET" target="_blank">
-        <input type="email" placeholder="your@email.com" name="email" required>
+      <form class="newsletter-form" action="https://app.kit.com/forms/9413033/subscriptions" method="POST" target="_blank">
+        <input type="text" name="fields[first_name]" placeholder="first name" required><input type="email" name="email_address" placeholder="your@email.com" required>
         <button type="submit">Subscribe</button>
       </form>
     </div>
@@ -1068,30 +1069,23 @@ footer {
   </div>
   <section style="background:var(--ash)">
     <div class="inner">
-      <div class="updates-grid">
-        <a href="https://authorfkinghayes.com/updates/signed-copies-and-swag" target="_blank" rel="noopener" class="update-card reveal">
-          <div class="update-card-img"><div class="update-card-img-placeholder">✦</div></div>
-          <div class="update-card-body"><span class="update-date">May 5, 2026</span><h3 class="update-title">Signed Copies and SWAG Are Back</h3><p class="update-excerpt">Signed copies are BACK — these baddies can be found in the Payhip store. For overseas readers, please email or send a message to order. Limited stock available now.</p><span class="update-read-more">Read More →</span></div>
-        </a>
-        <a href="https://authorfkinghayes.com/updates/trigger-warning-list-for-starving-butterfly" target="_blank" rel="noopener" class="update-card reveal">
-          <div class="update-card-img"><div class="update-card-img-placeholder">⚠</div></div>
-          <div class="update-card-body"><span class="update-date">May 5, 2026</span><h3 class="update-title">Trigger Warning List for Starving Butterfly</h3><p class="update-excerpt">The full trigger warning list for Starving Butterfly (Shadowed States Book 2) is now available. Please read before diving in — your mental health matters more than any book.</p><span class="update-read-more">Read More →</span></div>
-        </a>
-        <a href="https://authorfkinghayes.com/updates/cover-reveal-for-starving-butterfly-book-2-of-the-shadowed-states" target="_blank" rel="noopener" class="update-card reveal">
-          <div class="update-card-img"><div class="update-card-img-placeholder" style="color:rgba(96,48,160,0.3)">🦋</div></div>
-          <div class="update-card-body"><span class="update-date">February 20, 2026</span><h3 class="update-title">Cover Reveal: Starving Butterfly</h3><p class="update-excerpt">Book 2 of the Shadowed States Series revealed. Tropes include: pregnancy, serial killers, betrayal, enemies forced to work together, reverse harem / why choose, political corruption, trauma survival, and high-angst.</p><span class="update-read-more">Read More →</span></div>
-        </a>
-        <a href="https://authorfkinghayes.com/updates/trigger-warning-list-for-fixing-her-triggers-please-note-i-am-not-perfect" target="_blank" rel="noopener" class="update-card reveal">
-          <div class="update-card-img"><div class="update-card-img-placeholder" style="color:rgba(40,80,200,0.3)">⚠</div></div>
-          <div class="update-card-body"><span class="update-date">January 23, 2026</span><h3 class="update-title">Trigger Warning List for Fixing Her</h3><p class="update-excerpt">The full trigger warning list for Fixing Her (The Doll People Book 1). Extensive content advisory for this pitch black MMF horror tragedy — please review before reading.</p><span class="update-read-more">Read More →</span></div>
-        </a>
-        <a href="https://authorfkinghayes.com/updates/trigger-warning-list-for-slaughtered-firefly-nbsp-triggers-please-note-i" target="_blank" rel="noopener" class="update-card reveal">
-          <div class="update-card-img"><div class="update-card-img-placeholder" style="color:rgba(139,0,0,0.3)">⚠</div></div>
-          <div class="update-card-body"><span class="update-date">January 15, 2026</span><h3 class="update-title">Trigger Warning List for Slaughtered Firefly</h3><p class="update-excerpt">The full trigger warning list for Slaughtered Firefly (Shadowed States Book 1). This pitch black steamy RH horror story contains detailed graphic content — please review before reading.</p><span class="update-read-more">Read More →</span></div>
-        </a>
+
+      <!-- Loading state -->
+      <div id="updates-loading" style="text-align:center;padding:4rem 0">
+        <p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.1rem;color:var(--parchment);opacity:0.4;letter-spacing:0.1em">Loading dispatches from the dark…</p>
       </div>
+
+      <!-- Error state -->
+      <div id="updates-error" style="display:none;text-align:center;padding:4rem 0">
+        <p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1rem;color:var(--parchment);opacity:0.4">Could not reach the feed right now.</p>
+        <a href="https://fkinghayes.kit.com/posts" target="_blank" rel="noopener" class="btn-ghost" style="margin-top:1.5rem;display:inline-block">Read All Posts on Kit →</a>
+      </div>
+
+      <!-- Live feed grid -->
+      <div id="updates-grid" class="updates-grid" style="display:none"></div>
+
       <div style="text-align:center;margin-top:4rem">
-        <a href="https://authorfkinghayes.com/updates" target="_blank" rel="noopener" class="btn-ghost">View All Updates on AuthorFKingHayes.com →</a>
+        <a href="https://fkinghayes.kit.com/posts" target="_blank" rel="noopener" class="btn-ghost">View All Posts on Kit →</a>
       </div>
     </div>
   </section>
@@ -1123,8 +1117,8 @@ footer {
         <span class="section-label">The List</span>
         <h2 class="section-title" style="margin-bottom:1.5rem">Join the <em>Mailing List</em></h2>
         <p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.1rem;color:var(--parchment);opacity:0.7;margin-bottom:2rem">Get first access to new releases, cover reveals, and signed copy drops.</p>
-        <form class="newsletter-form" action="https://authorfkinghayes.com/mailing-list" method="GET" target="_blank">
-          <input type="email" placeholder="your@email.com" name="email" required>
+        <form class="newsletter-form" action="https://app.kit.com/forms/9413033/subscriptions" method="POST" target="_blank">
+          <input type="text" name="fields[first_name]" placeholder="first name" required><input type="email" name="email_address" placeholder="your@email.com" required>
           <button type="submit">Subscribe</button>
         </form>
       </div>
@@ -1141,6 +1135,101 @@ footer {
 </footer>
 
 <script>
+// ── KIT FEED ──
+const KIT_FEED_URL = 'https://rss.app/feeds/jul9CNckGQpEn17C.xml';
+
+function formatDate(dateStr) {
+  if (!dateStr) return '';
+  const d = new Date(dateStr);
+  return d.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+}
+
+function stripHtml(html) {
+  const tmp = document.createElement('div');
+  tmp.innerHTML = html || '';
+  return tmp.textContent || tmp.innerText || '';
+}
+
+function truncate(str, n) {
+  const clean = stripHtml(str).trim();
+  return clean.length > n ? clean.slice(0, n).trim() + '…' : clean;
+}
+
+function buildUpdateCard(item) {
+  const title   = item.title   || 'Update';
+  const url     = item.link    || 'https://fkinghayes.kit.com/posts';
+  const date    = formatDate(item.pubDate || item.date);
+  const excerpt = truncate(item.description || item.content || '', 160);
+  const image   = item.image   || null;
+
+  const imgHtml = image
+    ? `<div class="update-card-img"><img src="${image}" alt="" style="width:100%;height:100%;object-fit:cover;display:block;"></div>`
+    : `<div class="update-card-img"><div class="update-card-img-placeholder">✦</div></div>`;
+
+  return `
+    <a href="${url}" target="_blank" rel="noopener" class="update-card">
+      ${imgHtml}
+      <div class="update-card-body">
+        <span class="update-date">${date}</span>
+        <h3 class="update-title">${title}</h3>
+        <p class="update-excerpt">${excerpt}</p>
+        <span class="update-read-more">Read More →</span>
+      </div>
+    </a>`;
+}
+
+function parseXmlFeed(xml) {
+  const parser = new DOMParser();
+  const doc    = parser.parseFromString(xml, 'text/xml');
+  const items  = Array.from(doc.querySelectorAll('item')).slice(0, 6);
+
+  return items.map(item => {
+    // grab enclosure or media:content image if present
+    const enclosure = item.querySelector('enclosure');
+    const media     = item.querySelector('content') || item.getElementsByTagNameNS('http://search.yahoo.com/mrss/', 'content')[0];
+    const image     = (enclosure && enclosure.getAttribute('url'))
+                   || (media    && media.getAttribute('url'))
+                   || null;
+    return {
+      title:       item.querySelector('title')?.textContent       || '',
+      link:        item.querySelector('link')?.textContent        || '',
+      pubDate:     item.querySelector('pubDate')?.textContent     || '',
+      description: item.querySelector('description')?.textContent || '',
+      image,
+    };
+  });
+}
+
+async function loadKitFeed() {
+  const grid    = document.getElementById('updates-grid');
+  const loading = document.getElementById('updates-loading');
+  const error   = document.getElementById('updates-error');
+
+  try {
+    const proxy  = 'https://api.allorigins.win/raw?url=';
+    const res    = await fetch(proxy + encodeURIComponent(KIT_FEED_URL));
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const xml    = await res.text();
+    const items  = parseXmlFeed(xml);
+    if (!items.length) throw new Error('No items');
+
+    grid.innerHTML = items.map(buildUpdateCard).join('');
+    loading.style.display = 'none';
+    grid.style.display    = 'grid';
+
+    grid.querySelectorAll('.update-card').forEach((el, i) => {
+      el.style.opacity    = '0';
+      el.style.transform  = 'translateY(20px)';
+      el.style.transition = `opacity 0.6s ${i * 0.1}s ease, transform 0.6s ${i * 0.1}s ease`;
+      setTimeout(() => { el.style.opacity = '1'; el.style.transform = 'translateY(0)'; }, 50);
+    });
+
+  } catch (e) {
+    loading.style.display = 'none';
+    error.style.display   = 'block';
+  }
+}
+
 // ── ROUTING ──
 const pages = ['home','about','books','signed','triggers','updates','connect'];
 let currentPage = 'home';
@@ -1158,6 +1247,11 @@ function navigate(page) {
   document.querySelectorAll('.nav-links a').forEach(a => {
     a.classList.toggle('active', a.dataset.page === page);
   });
+  // load kit feed when updates page opens (only first time)
+  if (page === 'updates' && !document.getElementById('updates-grid').dataset.loaded) {
+    document.getElementById('updates-grid').dataset.loaded = '1';
+    loadKitFeed();
+  }
   setTimeout(attachReveals, 50);
 }
 
